@@ -1,0 +1,311 @@
+HTML Code
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lynzi — Citadel | Alternative TS Model & Escort</title>
+  <meta name="description" content="Lynzi — tattooed trans model. Discreet bookings for private companionship, content sessions, and VIP experiences." />
+  <meta name="author" content="Lynzi" />
+  <!-- Simple modern styling, single-file -->
+  <style>
+    :root{
+      --bg:#0f0f12;
+      --card:#121217;
+      --muted:#9aa0a6;
+      --accent:#c67bff;
+      --accent-2:#ff7b9c;
+      --glass: rgba(255,255,255,0.04);
+      --maxwidth:1100px;
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(198,123,255,0.06), transparent),
+                  radial-gradient(800px 400px at 90% 90%, rgba(255,123,156,0.04), transparent),
+                  var(--bg);
+      color:#e9e9ec;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+      padding:32px 20px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      gap:24px;
+      font-size:16px;
+    }
+
+    .wrap{width:100%; max-width:var(--maxwidth);}
+
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; margin-bottom:20px;
+    }
+    .brand{
+      display:flex; gap:14px; align-items:center;
+    }
+    .logo{
+      width:56px; height:56px; background: linear-gradient(135deg,var(--accent),var(--accent-2));
+      border-radius:12px; display:flex; align-items:center; justify-content:center;
+      font-weight:700; color:#0b0710; font-size:20px;
+      box-shadow: 0 8px 30px rgba(198,123,255,0.12), inset 0 -4px 10px rgba(255,255,255,0.03);
+    }
+    .site-title{font-size:18px; font-weight:600}
+    .site-sub{font-size:12px; color:var(--muted); margin-top:2px}
+
+    nav a{color:var(--muted); text-decoration:none; margin-left:18px; font-size:14px}
+    nav a.button{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#080308; padding:10px 14px; border-radius:10px; font-weight:600;
+      box-shadow: 0 8px 30px rgba(198,123,255,0.12);
+    }
+
+    main{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+    }
+
+    /* left column */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.04);
+    }
+
+    .hero{
+      display:flex; gap:18px; align-items:center;
+    }
+    .hero-img{
+      width:160px; height:160px; border-radius:12px; overflow:hidden;
+      flex-shrink:0; background:url('https://via.placeholder.com/600x600?text=Your+Photo') center/cover no-repeat;
+      border:3px solid rgba(255,255,255,0.03);
+    }
+    .hero-copy h1{margin:0 0 6px 0; font-size:26px}
+    .hero-copy p{margin:0; color:var(--muted)}
+    .badges{margin-top:12px; display:flex; gap:8px; flex-wrap:wrap}
+    .badge{background:var(--glass); padding:6px 10px; border-radius:999px; font-size:13px; color:var(--muted);}
+
+    .section{margin-top:18px}
+    .section h2{margin:0 0 12px 0; font-size:18px}
+    .bio{color:#e2dfe3; line-height:1.6}
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:8px}
+    .stat{background:rgba(255,255,255,0.02); padding:10px; border-radius:10px; text-align:center}
+    .stat .num{font-weight:700; font-size:18px}
+    .services ul{list-style:none; padding:0; margin:0}
+    .services li{padding:8px 0; border-bottom:1px dashed rgba(255,255,255,0.02); color:var(--muted)}
+    .cta{
+      display:flex; gap:12px; margin-top:14px;
+    }
+    .cta a{
+      display:inline-block; padding:12px 16px; border-radius:10px; text-decoration:none; font-weight:700;
+    }
+    .cta a.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#080308}
+    .cta a.ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
+
+    /* gallery */
+    .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:8px}
+    .gallery img{width:100%; height:120px; object-fit:cover; border-radius:8px; display:block}
+
+    /* right column */
+    aside .panel{margin-bottom:18px}
+    .booking-form label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px}
+    .booking-form input, .booking-form textarea, .booking-form select{
+      width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit;
+      margin-bottom:10px;
+    }
+    .privacy{font-size:12px; color:var(--muted); line-height:1.3}
+    footer{margin-top:18px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:12px; align-items:center}
+    .age-gate{
+      position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+      background:linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.85)); z-index:9999;
+    }
+    .age-card{background:#0d0d0f; padding:22px; border-radius:12px; width:380px; max-width:94%; text-align:center; border:1px solid rgba(255,255,255,0.04)}
+    .age-card h3{margin:0 0 10px 0}
+    .age-card p{color:var(--muted); font-size:14px}
+    .age-card button{margin-top:14px; padding:10px 14px; border-radius:10px; border:0; cursor:pointer; font-weight:700}
+    .danger{background:#333; color:#fff}
+    .confirm{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#080308}
+
+    @media (max-width:980px){
+      main{grid-template-columns:1fr; padding-bottom:60px}
+      .hero-img{width:120px;height:120px}
+      aside{order:2}
+    }
+  </style>
+</head>
+<body>
+  <!-- Age gate -->
+  <div id="ageGate" class="age-gate" aria-hidden="false">
+    <div class="age-card" role="dialog" aria-labelledby="ageTitle">
+      <h3 id="ageTitle">Adult Content — 18+ only</h3>
+      <p>By entering you confirm you are 18 years or older. This site contains adult-oriented companionship and modeling services. If you are under 18, leave now.</p>
+      <div style="display:flex; gap:10px; justify-content:center;">
+        <button class="danger" id="leaveBtn">Leave</button>
+        <button class="confirm" id="enterBtn">Enter</button>
+      </div>
+      <p style="margin-top:10px; color:var(--muted); font-size:13px">This is a basic gate and does not replace legal compliance or ID checks during booking.</p>
+    </div>
+  </div>
+
+  <div class="wrap" id="site">
+    <header>
+      <div class="brand">
+        <div class="logo">C</div>
+        <div>
+          <div class="site-title">Citadel — Lynzi</div>
+          <div class="site-sub">Tattooed Trans Model · Discreet VIP Experiences</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#bio">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#services">Services</a>
+        <a class="button" href="#booking">Book</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card" aria-labelledby="heroTitle">
+        <div class="hero">
+          <div class="hero-img" id="heroImg" aria-hidden="true"></div>
+          <div class="hero-copy">
+            <h1 id="heroTitle">Lynzi — The Citadel</h1>
+            <p class="bio">Tattooed, bold, and precise. I blend alternative modeling with refined companionship. Expect discretion, warmth, and an experience crafted to feel like a private story—no scripts, just presence.</p>
+
+            <div class="badges" aria-hidden="true">
+              <div class="badge">Trans Model</div>
+              <div class="badge">Tattooed</div>
+              <div class="badge">VIP Visits</div>
+              <div class="badge">Content Sessions</div>
+              <div class="badge">Travel Available</div>
+            </div>
+
+            <div class="cta">
+              <a class="primary" href="mailto:you@your.email?subject=Booking%20Inquiry%20-%20Lynzi">Request Booking</a>
+              <a class="ghost" href="#gallery">View Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="bio" class="section">
+          <h2>About</h2>
+          <p class="bio">Hi. I’m Lynzi. Tattooed, unapologetic, and deliberate. I’m a trans model who crafts intimate, high-quality experiences for discerning clients. Whether you want a companion for an evening, bespoke content, or a private session, I bring warmth, curiosity, and absolute discretion. I work by appointment only.</p>
+        </div>
+
+        <div class="section services" id="services">
+          <h2>Services & Offerings</h2>
+          <ul>
+            <li>Private companionship — dinners, events, travel (discreet & tailored)</li>
+            <li>Content creation — custom photo/video sessions</li>
+            <li>VIP overnight and travel bookings — vetted and secure</li>
+            <li>Event appearances & modeling</li>
+          </ul>
+          <small style="display:block;margin-top:8px;color:var(--muted)">Rates quoted after inquiry. I screen all bookings; respectful, legal requests only.</small>
+        </div>
+
+        <div class="section">
+          <h2>Gallery</h2>
+          <div id="gallery" class="gallery" aria-live="polite">
+            <!-- Swap with your images -->
+            <img src="https://via.placeholder.com/400x300?text=Photo+1" alt="Gallery image 1">
+            <img src="https://via.placeholder.com/400x300?text=Photo+2" alt="Gallery image 2">
+            <img src="https://via.placeholder.com/400x300?text=Photo+3" alt="Gallery image 3">
+            <img src="https://via.placeholder.com/400x300?text=Photo+4" alt="Gallery image 4">
+            <img src="https://via.placeholder.com/400x300?text=Photo+5" alt="Gallery image 5">
+            <img src="https://via.placeholder.com/400x300?text=Photo+6" alt="Gallery image 6">
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card panel booking-form" id="booking">
+          <h2>Booking — Quick Request</h2>
+          <!-- This uses mailto to avoid needing a backend. -->
+          <label for="name">Your name</label>
+          <input id="name" placeholder="John Doe">
+
+          <label for="email">Email</label>
+          <input id="email" placeholder="your@email.com">
+
+          <label for="date">Preferred date/time</label>
+          <input id="date" placeholder="e.g. 2025-12-10 evening">
+
+          <label for="msg">Message / requests</label>
+          <textarea id="msg" rows="4" placeholder="Tell me what you want, brief and respectful."></textarea>
+
+          <button id="send" style="width:100%; padding:12px; border-radius:10px; border:0; font-weight:700; cursor:pointer; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#080308">Send Request</button>
+
+          <p style="margin-top:10px" class="privacy">I vet all requests. No minors, no illegal acts, and no unsafe requests. By contacting, you confirm you are 18+. I respect discretion — payments and logistics discussed privately.</p>
+        </div>
+
+        <div class="card panel">
+          <h3>Details</h3>
+          <div class="grid-3" style="margin-top:8px">
+            <div class="stat"><div class="num">+10yrs</div><div style="font-size:12px;color:var(--muted)">Modeling</div></div>
+            <div class="stat"><div class="num">Discreet</div><div style="font-size:12px;color:var(--muted)">Screened bookings</div></div>
+            <div class="stat"><div class="num">Travel</div><div style="font-size:12px;color:var(--muted)">Available</div></div>
+          </div>
+        </div>
+
+        <div class="card panel">
+          <h3>Safe & Private</h3>
+          <p class="privacy">No public payment links. Meet-and-greet or ID verification may be required. I prioritize safety for both clients and myself.</p>
+        </div>
+
+        <footer>
+          <div>© <strong>Lynzi</strong></div>
+          <div style="text-align:right">
+            <div style="font-size:13px;color:var(--muted)">Contact: <a href="mailto:you@your.email" style="color:var(--muted);text-decoration:underline">you@your.email</a></div>
+          </div>
+        </footer>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    // Age gate logic
+    document.getElementById('enterBtn').addEventListener('click', function(){
+      localStorage.setItem('ageConfirmed','1');
+      document.getElementById('ageGate').style.display = 'none';
+    });
+    document.getElementById('leaveBtn').addEventListener('click', function(){
+      window.location.href = 'https://www.google.com';
+    });
+    // hide gate if previously accepted
+    if(localStorage.getItem('ageConfirmed') === '1'){
+      document.getElementById('ageGate').style.display = 'none';
+    }
+
+    // Mailto booking
+    document.getElementById('send').addEventListener('click', function(){
+      var name = encodeURIComponent(document.getElementById('name').value || 'Name not provided');
+      var email = encodeURIComponent(document.getElementById('email').value || 'No email');
+      var date = encodeURIComponent(document.getElementById('date').value || 'No date provided');
+      var msg = encodeURIComponent(document.getElementById('msg').value || '');
+      var subject = encodeURIComponent('Booking Request — ' + name);
+      var body = encodeURIComponent('Name: ' + name + '%0D%0AEmail: ' + email + '%0D%0APreferred: ' + date + '%0D%0A%0D%0A' + msg);
+      var mailto = 'mailto:you@your.email?subject=' + subject + '&body=' + body;
+      window.location.href = mailto;
+    });
+
+    // Replace hero image with user settable data-attr (optional)
+    // e.g. <div class="hero-img" data-img="https://..."></div>
+    (function(){
+      document.querySelectorAll('.hero-img').forEach(function(el){
+        var src = el.getAttribute('data-img');
+        if(src) el.style.backgroundImage = 'url(' + src +')';
+      });
+    })();
+  </script>
+</body>
+</html>
